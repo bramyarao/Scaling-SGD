@@ -48,22 +48,22 @@ Resources: <br/>
 Sample run: python preprocess_data.py all 1000 <br/>
 Format: python preprocess_data.py \<features\> \<vocabsize\> <br/>
 where, <br/> <br/>
-\<features\>: <br/>
 <div style="text-align: justify"> 
 <ul style="list-style-type:disc;">
+\<features\>: <br/>
   <li>correspond to the feature we need to include for the ML task </li>
   <li>specifying "all" will include all the 13 features (horse + race features) along with features from summary </li>
   <li>specifying "horse_number, jockey, trainer" will include the specified three features along with features from summary. </li>
 </ul>  
 </div>
 
-\<vocabsize\>: <br/>
 <div style="text-align: justify"> 
 <ul style="list-style-type:disc;">
+\<vocabsize\>: <br/>
   <li>correspond to the top <int> words to include as features from summary. </li>
 </ul>  
 </div>
-<br/>
+
 
 ### Step-2a: Start training for Synchronous SGD (SYNSGD)
 
