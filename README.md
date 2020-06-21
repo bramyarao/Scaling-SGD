@@ -25,7 +25,7 @@ different approaches were compared as listed below:
 </p>
 
 The overview of the communication structure for the different methods, data processing, the hyperparameters used for different algorithms, MPI parallel environment calls and the results obtained are given in <a href="Report/main.pdf" target="blank">this pdf</a>.
-
+<br/>
 
 Dependencies:<br/>
 [1] C <br/>
@@ -34,52 +34,61 @@ Dependencies:<br/>
 [4] [scikit-learn](https://scikit-learn.org/stable/) <br/>
 [5] [xlrd](https://pypi.org/project/xlrd/) <br/>
 Last three dependencies are required for preprocessing the data.
+<br/>
 
 Resources: <br/>
 [1] [Hong Kong Horse Racing Dataset](https://www.kaggle.com/alberthkcheng/hong-kong-horse-racing-explained-with-data)
 
+</div>
+
 ## How to run?
-------------------------------------------------------------------------
-Step-1: Preprocess the data and create train, validation and test splits
-------------------------------------------------------------------------
+
+### Step-1: Preprocess the data and create train, validation and test splits
+
 Sample run: python preprocess_data.py all 1000 <br/>
-Format: python preprocess_data.py \<features\> \<vocabsize\> <br/>
+Format: python preprocess_data.py &ltfeatures&gt \<vocabsize\> <br/>
 where, <br/> <br/>
 \<features\>: <br/>
-  * correspond to the feature we need to include for the ML task
-  * specifying "all" will include all the 13 features (horse + race features) along with features from summary
-  * specifying "horse_number, jockey, trainer" will include the specified three features along with features from summary. 
+<div style="text-align: justify"> 
+<ul style="list-style-type:disc;">
+  <li>correspond to the feature we need to include for the ML task </li>
+  <li>specifying "all" will include all the 13 features (horse + race features) along with features from summary </li>
+  <li>specifying "horse_number, jockey, trainer" will include the specified three features along with features from summary. </li>
+</ul>  
+</div>
 
 \<vocabsize\>: <br/>
-  * correspond to the top <int> words to include as features from summary.
+<div style="text-align: justify"> 
+<ul style="list-style-type:disc;">
+  <li>correspond to the top <int> words to include as features from summary. </li>
+</ul>  
+</div>
 
-----------------------------------------------------
-Step-2a: Start training for Synchronous SGD (SYNSGD)
-----------------------------------------------------
+### Step-2a: Start training for Synchronous SGD (SYNSGD)
+
 mpicc -o main *.c <br/>
 mpiexec -n 4 ./main 1 10   <br/>
  <br/>
 The above command starts the training with 4 processors, using SYNSGD algorithm which has input code of 1 and training halts once validation accuracy of current iteration reaches 10%
 
-----------------------------------------------------------------------------
-Step-2b: Start training for Elastic Averaging based Asynchronous SGD (EASGD)
-----------------------------------------------------------------------------
+
+### Step-2b: Start training for Elastic Averaging based Asynchronous SGD (EASGD)
+
 mpicc -o main *.c <br/>
 mpiexec -n 4 ./main 2 10   <br/>
  <br/>
 The above command starts the training with 4 processors, using EASGD algorithm which has input code of 2 and training halts once validation accuracy of current iteration reaches 10%
 
-------------------------------------------------------------------
-Step-2c: Start training for HOGWILD based Asynchronous SGD (HWSGD)
-------------------------------------------------------------------
+### Step-2c: Start training for HOGWILD based Asynchronous SGD (HWSGD)
+
 mpicc -o main *.c <br/>
 mpiexec -n 4 ./main 3 10   <br/>
  <br/>
 The above command starts the training with 4 processors, using HWSGD algorithm which has input code of 3 and training halts once validation accuracy of current iteration reaches 10%
 
-## Misc:
+### Misc:
 [1] If you want to change hyperparameters of the parallel algorithm or ML algorithm, look at input_variables.c
 
-</div>
+
 
 
