@@ -1,3 +1,5 @@
+This work is copyrighted. 
+
 *************************************************************
 Implementation of our CPSC 521 - Final Project (Fall 2019)
 Scaling up Stochastic Gradient Descent using Data Parallelism
