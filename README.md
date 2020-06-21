@@ -1,29 +1,24 @@
-This work is copyrighted. 
+# Scaling up Stochastic Gradient Descent using Data Parallelism
+## This work is copyrighted. 
 
-*************************************************************
-Implementation of our CPSC 521 - Final Project (Fall 2019)
-Scaling up Stochastic Gradient Descent using Data Parallelism
-*************************************************************
+Authors: <br/>
+Ramya Rao Basava and Ganesh Jawahar <br/>
+Department of Computer Science, <br/>
+University of British Columbia.
+<br/>
+<br/>
+Guide: <br/>
+Prof. Alan Wagner
+<br/>
 
-Authors:
-Ramya Rao Basava,
-Department of Computer Science,
-University of British Columbia,
-ramyarao@cs.ubc.ca
-and
-Ganesh Jawahar,
-Department of Computer Science,
-University of British Columbia,
-ganeshjw@cs.ubc.ca
+<div style="text-align: justify"> 
 
-Guide: Dr. Alan Wagner
-
-Dependencies:
-[1] C
-[2] MPICH
-[3] Python 
-[4] scikit-learn (https://scikit-learn.org/stable/)
-[5] xlrd (https://pypi.org/project/xlrd/)
+Dependencies:<br/>
+[1] C <br/>
+[2] MPICH <br/>
+[3] Python <br/> 
+[4] scikit-learn (https://scikit-learn.org/stable/) <br/>
+[5] xlrd (https://pypi.org/project/xlrd/) <br/>
 Last three dependencies are required for preprocessing the data.
 
 Resources:
@@ -69,5 +64,7 @@ training halts once validation accuracy of current iteration reaches 10%
 
 Misc:
 [1] If you want to change hyperparameters of the parallel algorithm or ML algorithm, look at input_variables.c
+
+</div>
 
 
