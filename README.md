@@ -45,12 +45,12 @@ Resources: <br/>
 ### Step-1: Preprocess the data and create train, validation and test splits
 <div style="text-align: justify">
 Sample run: python preprocess_data.py all 1000 <br/>
-Format: python preprocess_data.py \<features\> \<vocabsize\> <br/>
+Format: python preprocess_data.py &ltfeatures&gt &ltvocabsize&gt <br/>
 where, <br/> <br/>
 </div>
  
 <div style="text-align: justify">
-&ltfeatures&gt:
+&lt features &gt:
 <ul style="list-style-type:disc;"> 
   <li>correspond to the feature we need to include for the ML task </li>
   <li>specifying "all" will include all the 13 features (horse + race features) along with features from summary </li>
