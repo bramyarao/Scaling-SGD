@@ -46,7 +46,7 @@ Resources: <br/>
 ### Step-1: Preprocess the data and create train, validation and test splits
 
 Sample run: python preprocess_data.py all 1000 <br/>
-Format: python preprocess_data.py &ltfeatures&gt \<vocabsize\> <br/>
+Format: python preprocess_data.py \<features\> \<vocabsize\> <br/>
 where, <br/> <br/>
 \<features\>: <br/>
 <div style="text-align: justify"> 
@@ -63,6 +63,7 @@ where, <br/> <br/>
   <li>correspond to the top <int> words to include as features from summary. </li>
 </ul>  
 </div>
+<br/>
 
 ### Step-2a: Start training for Synchronous SGD (SYNSGD)
 
