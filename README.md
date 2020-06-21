@@ -11,14 +11,18 @@ Guide: <br/>
 Prof. Alan Wagner
 <br/>
 
+<p align="center">
+<img width="600" src="Report\images\1500f_10v_def.pdf">
+</p>
+
 <div style="text-align: justify"> 
 
-Dependencies:<br/>
-[1] C <br/>
-[2] MPICH <br/>
-[3] Python <br/> 
-[4] scikit-learn (https://scikit-learn.org/stable/) <br/>
-[5] xlrd (https://pypi.org/project/xlrd/) <br/>
+Dependencies:
+[1] C
+[2] MPICH
+[3] Python 
+[4] scikit-learn (https://scikit-learn.org/stable/)
+[5] xlrd (https://pypi.org/project/xlrd/)
 Last three dependencies are required for preprocessing the data.
 
 Resources:
@@ -64,6 +68,8 @@ training halts once validation accuracy of current iteration reaches 10%
 
 Misc:
 [1] If you want to change hyperparameters of the parallel algorithm or ML algorithm, look at input_variables.c
+
+
 
 </div>
 
