@@ -100,7 +100,7 @@ For performing the machine learning task, we use least squares based \textit{lin
 \begin{table}[ht]
 %\scriptsize
 \centering
- \begin{tabular}{lp{4.5in}l} 
+ \begin{tabular}{lp{4.0in}l} 
  \toprule
 \textbf{Hyperparameter} & \textbf{Description} & \textbf{Value} \\ \midrule
 Batch size & Size of the minibatch of training examples for each worker & 200 \\
@@ -141,7 +141,7 @@ MPI\_Recv & \xmark & \xmark & \xmark & \xmark & \xmark & \cmark \\
 For the three parallel algorithms given in Section~\ref{sec:palgs}, the computation is run with different number of processors $n=$ 4, 8, 16 and 32. The training terminates once the validation performance reaches an accuracy of 10\%. The training time (in minutes) is recorded for each case and is plotted below for different methods:\\
 
 {\centering
-\includegraphics[width=7cm, height=4.8cm]{images/1500f_10v_def.pdf}\\
+\includegraphics[width=9cm]{images/1500f_10v_def.pdf}\\
 }
 
 From the plot, we observe that asynchronous algorithms (EASGD, HWSGD) are faster than synchronous algorithm (SYNSGD) by a large margin. This is mainly due to the communication bottleneck prevalent in SYNSGD when the master waits for all the workers to return the gradients at each iteration. We also find that the training time of SYNSGD increases with number of processors and requires more iterations to converge.
@@ -164,7 +164,7 @@ The following are the validation and testing results obtained, with the hyper-pa
 For EASGD, we experiment with different communication periods for different number of processors $n=$ 4, 8, 16 and 32 and stop the training once the validation performance reaches an accuracy of 10\%. The  training  time (in  minutes)  is  recorded  for  each  case. The plot below shows the effect on training time, as the communication period and $n$ are varied:\\
 
 {\centering
-\includegraphics[width=10cm, height=4.8cm]{images/1500f_10v_ea.pdf}\\
+\includegraphics[width=14cm]{images/1500f_10v_ea.pdf}\\
 }
 
 From the plot we observe that, when the communication period is high (say 50), the training time increases significantly. This result indicates the possibility that the worker weight becomes stale, when the communication period is high and henceforth, the worker needs more iterations to converge.
@@ -173,7 +173,7 @@ From the plot we observe that, when the communication period is high (say 50), t
 For HWSGD, we experiment with different waitall periods for different number of processors $n=$ 4, 8, 16 and 32 and stop the training once the validation performance reaches an accuracy of 10\%. The  training  time (in  minutes)  is  recorded  for  each  case. The plot below shows the effect on training time, as the communication period and $n$ are varied:\\
 
 {\centering
-\includegraphics[width=10cm, height=4.9cm]{images/1500f_10v_hw.pdf}\\
+\includegraphics[width=14cm]{images/1500f_10v_hw.pdf}\\
 }
 
 From the plot, we observe that the sweet spot of waitall period is 25. For low waitall periods, the training time increases with the increase in number of processors. This indicates that staleness of worker weight increases with increase in number of processors, especially for low waitall periods.
