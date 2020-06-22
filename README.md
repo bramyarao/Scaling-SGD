@@ -33,8 +33,8 @@ Dependencies:<br/>
 [1] C <br/>
 [2] MPICH <br/>
 [3] Python <br/>
-[4] [scikit-learn](https://scikit-learn.org/stable/) <br/>
-[5] [xlrd](https://pypi.org/project/xlrd/) <br/>
+[4] <a href="https://scikit-learn.org/stable/" target="blank">scikit-learn</a> <br/>
+[5] <a href="https://pypi.org/project/xlrd/" target="blank">xlrd</a> <br/>
 Last three dependencies are required for preprocessing the data.
 <br/>
 <br/>
