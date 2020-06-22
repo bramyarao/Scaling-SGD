@@ -63,7 +63,7 @@ where, <br/> <br/>
 <div style="text-align: justify">
 &lt;vocabsize&gt;:
 <ul style="list-style-type:disc;">
-  <li>correspond to the top <int> words to include as features from summary. </li>
+  <li>correspond to the top &lt;int&gt; words to include as features from summary. </li>
 </ul> 
 </div> 
 
