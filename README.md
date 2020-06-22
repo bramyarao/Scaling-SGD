@@ -89,7 +89,7 @@ mpicc -o main *.c <br/>
 mpiexec -n 4 ./main 3 10   <br/>
  <br/>
 The above command starts the training with 4 processors, using HWSGD algorithm which has input code of 3 and training halts once validation accuracy of current iteration reaches 10%.
-</div> <br/>
+</div>
 
 ### Misc:
 <div style="text-align: justify">
