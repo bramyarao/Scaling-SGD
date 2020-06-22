@@ -66,6 +66,7 @@ where, <br/> <br/>
   <li>correspond to the top &lt;int&gt; words to include as features from summary. </li>
 </ul> 
 </div> 
+<br/>
 
 ### Step-2a: Start training for Synchronous SGD (SYNSGD)
 <div style="text-align: justify">
@@ -93,7 +94,7 @@ mpiexec -n 4 ./main 3 10   <br/>
 The above command starts the training with 4 processors, using HWSGD algorithm which has input code of 3 and training halts once validation accuracy of current iteration reaches 10%.
 </div>
  <br/>
- 
+
 ### Misc:
 <div style="text-align: justify">
 [1] If you want to change hyperparameters of the parallel algorithm or ML algorithm, look at input_variables.c
