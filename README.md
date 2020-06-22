@@ -1,4 +1,4 @@
-# Scaling up Stochastic Gradient Descent using Data Parallelism
+# Scaling up Stochastic Gradient Descent using Data Parallelism: Application to Horse racing prediction using Machine Learning
 ## This work is copyrighted. 
 
 Authors: <br/>
