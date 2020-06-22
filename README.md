@@ -65,8 +65,7 @@ where, <br/> <br/>
 <ul style="list-style-type:disc;">
   <li>correspond to the top &lt;int&gt; words to include as features from summary. </li>
 </ul> 
-</div> 
-<br/>
+</div> <br/>
 
 ### Step-2a: Start training for Synchronous SGD (SYNSGD)
 <div style="text-align: justify">
@@ -74,8 +73,7 @@ mpicc -o main *.c <br/>
 mpiexec -n 4 ./main 1 10   <br/>
  <br/>
 The above command starts the training with 4 processors, using SYNSGD algorithm which has input code of 1 and training halts once validation accuracy of current iteration reaches 10%.
-</div>
- <br/>
+</div> <br/>
 
 ### Step-2b: Start training for Elastic Averaging based Asynchronous SGD (EASGD)
 <div style="text-align: justify">
@@ -83,8 +81,7 @@ mpicc -o main *.c <br/>
 mpiexec -n 4 ./main 2 10   <br/>
  <br/>
 The above command starts the training with 4 processors, using EASGD algorithm which has input code of 2 and training halts once validation accuracy of current iteration reaches 10%.
-</div>
- <br/>
+</div> <br/>
 
 ### Step-2c: Start training for HOGWILD based Asynchronous SGD (HWSGD)
 <div style="text-align: justify">
@@ -92,8 +89,7 @@ mpicc -o main *.c <br/>
 mpiexec -n 4 ./main 3 10   <br/>
  <br/>
 The above command starts the training with 4 processors, using HWSGD algorithm which has input code of 3 and training halts once validation accuracy of current iteration reaches 10%.
-</div>
- <br/>
+</div> <br/>
 
 ### Misc:
 <div style="text-align: justify">
