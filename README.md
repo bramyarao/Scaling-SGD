@@ -15,9 +15,11 @@ Prof. Alan Wagner
 <div style="text-align: justify"> 
 In this project, the winner of the Hong Kong Horse Racing is predicted using Machine Learning (ML). In addition to the standard horse and race features, the most frequent words from the match summary for each race are also used as input features. Least squares regression with L2 regularization is used. Given that this is a parallel computing project, apart from trying to get a good accuracy for the ML problem, one of the main aims of the project was to reduce the computation time by parallelizing the Stochastic Gradient Descent (SGD) step. For this, three
 different approaches were compared as listed below:
-* Synchronous SGD
-* Elastic Averaging based Asynchronous SGD
-* HOGWILD based Asynchronous SGD (based on distributed memory, not shared memory)
+<ul style="list-style-type:disc;"> 
+<li> Synchronous SGD </li>
+<li> Elastic Averaging based Asynchronous SGD </li>
+<li> HOGWILD based Asynchronous SGD (based on distributed memory, not shared memory) </li>
+</ul>
 
 <p align="center">
 <img width="400" src="1500f_10v_def.jpg">
