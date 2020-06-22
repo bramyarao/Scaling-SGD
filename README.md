@@ -53,7 +53,7 @@ where, <br/> <br/>
  
 <div style="text-align: justify">
 &lt;features&gt;:
-<ul> 
+<ul style="list-style-type:disc;"> 
   <li>correspond to the feature we need to include for the ML task </li>
   <li>specifying "all" will include all the 13 features (horse + race features) along with features from summary </li>
   <li>specifying "horse_number, jockey, trainer" will include the specified three features along with features from summary. </li>
@@ -74,6 +74,7 @@ mpiexec -n 4 ./main 1 10   <br/>
  <br/>
 The above command starts the training with 4 processors, using SYNSGD algorithm which has input code of 1 and training halts once validation accuracy of current iteration reaches 10%.
 </div>
+ <br/>
 
 ### Step-2b: Start training for Elastic Averaging based Asynchronous SGD (EASGD)
 <div style="text-align: justify">
@@ -82,6 +83,7 @@ mpiexec -n 4 ./main 2 10   <br/>
  <br/>
 The above command starts the training with 4 processors, using EASGD algorithm which has input code of 2 and training halts once validation accuracy of current iteration reaches 10%.
 </div>
+ <br/>
 
 ### Step-2c: Start training for HOGWILD based Asynchronous SGD (HWSGD)
 <div style="text-align: justify">
@@ -90,7 +92,8 @@ mpiexec -n 4 ./main 3 10   <br/>
  <br/>
 The above command starts the training with 4 processors, using HWSGD algorithm which has input code of 3 and training halts once validation accuracy of current iteration reaches 10%.
 </div>
-
+ <br/>
+ 
 ### Misc:
 <div style="text-align: justify">
 [1] If you want to change hyperparameters of the parallel algorithm or ML algorithm, look at input_variables.c
