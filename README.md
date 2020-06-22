@@ -53,7 +53,7 @@ where, <br/> <br/>
  
 <div style="text-align: justify">
 &lt;features&gt;:
-<ul style="list-style-type:disc;"> 
+<ul> 
   <li>correspond to the feature we need to include for the ML task </li>
   <li>specifying "all" will include all the 13 features (horse + race features) along with features from summary </li>
   <li>specifying "horse_number, jockey, trainer" will include the specified three features along with features from summary. </li>
